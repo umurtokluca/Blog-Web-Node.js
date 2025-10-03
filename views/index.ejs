@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+    <div class="form-container">
+        <form action="/submit" method="POST">
+            <input type="text" name="title" placeholder="Enter your title" maxlength="25" required>
+            <textarea name="content" id="content" placeholder="Enter your content" maxlength="100" required></textarea>
+            <input class="btn-submit" type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="blog-post-container">
+        <% posts.forEach((post, index) => { %>
+        <div class="blog-post-item">
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+
+            <form action="/delete/<%= index %>" method="POST">
+                <button type="submit" class="btn-delete">Delete</button>
+            </form>
+
+            <a href="/edit/<%= index %>">
+                <button type="button" class="btn-edit">Edit</button>
+            </a>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

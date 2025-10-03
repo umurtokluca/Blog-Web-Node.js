@@ -1,0 +1,25 @@
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;font-family: Fira Sans Condensed;}
+body {background-color: #121212;color: #fff;height: 100vh;}
+input[type="submit"], button {border: none;}
+.container {display: flex;height: 100%;}
+
+.btn-delete {background: #e20707;}
+.btn-edit {background: #0085FF;}
+.btn-submit {background: #00701f;}
+
+
+.btn-submit {width: 100px;height: 30px;color: #fff;cursor: pointer;}
+.btn-delete,
+.btn-edit {width: 70px;height: 25px;color: #fff;cursor: pointer;}
+
+.form-container {width: 35%;display: flex;justify-content: center;background-color: #1e1e1e;align-items: center;height: 100%;}
+.form-container input[type="text"], .form-container textarea {width: 100%;margin: 10px 0;border: 1.5px solid;text-indent: 10px;}
+.form-container input[type="text"]  {height: 35px;}
+.form-container textarea {min-height: 100px;}
+.form-container input[type="submit"] {width: 100px;height: 30px;}
+
+.blog-post-container {display: flex;width: 65%;flex-direction: column;align-items: center;padding-top: 50px;}
+.blog-post-item {width: 45%;padding: 2rem;border: 1.5px solid;margin: 1%;position: relative;overflow: auto;background-color: #1e1e1e;}
+.blog-post-item h2 {font-size: 1.5rem;margin-bottom: 1rem;}
+.blog-post-item p {font-size: 1rem;line-height: 1.5;}

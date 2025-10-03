@@ -1,17 +1,21 @@
 <%- include("partials/header.ejs") %>
 
-<h1>Blog Post Düzenle</h1>
+<div class="edit-container">
+  <div class="edit-form-container">
+      <h1>Edit Blog Post</h1>
 
-<form action="/edit/<%= postId %>" method="POST">
-  <input type="text" name="title" value="<%= post.title %>" required>
-  <textarea name="content" required><%= post.content %></textarea>
-  <button type="submit">Update</button>
-</form>
+      <form class="edit-form" action="/edit/<%= postId %>" method="POST">
+        <input type="text" name="title" value="<%= post.title %>" required>
+        <textarea name="content" required><%= post.content %></textarea>
 
-<form action="/delete/<%= postId %>" method="POST">
-    <button type="submit" class="btn-delete">Delete</button>
-</form>
+<button class="btn-submit" type="submit">Update</button>
+      </form>
+        <form action="/delete/<%= postId %>" method="POST">
+          <button class="btn-delete" type="submit">Delete</button>
+        </form>
 
-<a href="/">Go Back</a>
+  </div>
+  <a class="btn-edit" href="/">Go Back</a>
+</div>
 
 <%- include("partials/footer.ejs") %>

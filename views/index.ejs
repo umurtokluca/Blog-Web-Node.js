@@ -14,13 +14,13 @@
             <h2><%= post.title %></h2>
             <p><%= post.content %></p>
 
-            <form action="/delete/<%= index %>" method="POST">
+            <form class="blog-post-buttons" action="/delete/<%= index %>" method="POST">
+                <a href="/edit/<%= index %>">
+                    <button type="button" class="btn-edit">Edit</button>
+                </a> 
+
                 <button type="submit" class="btn-delete">Delete</button>
             </form>
-
-            <a href="/edit/<%= index %>">
-                <button type="button" class="btn-edit">Edit</button>
-            </a>
         </div>
         <% }) %>
     </div>

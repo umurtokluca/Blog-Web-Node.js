@@ -4,22 +4,39 @@ body {background-color: #121212;color: #fff;height: 100vh;}
 input[type="submit"], button {border: none;}
 .container {display: flex;height: 100%;}
 
-.btn-delete {background: #e20707;}
-.btn-edit {background: #0085FF;}
-.btn-submit {background: #00701f;}
+.btn-delete {background: #CB0404;}
+.btn-edit {background: #F4631E;}
+.btn-submit {background: #309898;}
 
 
-.btn-submit {width: 100px;height: 30px;color: #fff;cursor: pointer;}
+.btn-submit,
 .btn-delete,
-.btn-edit {width: 70px;height: 25px;color: #fff;cursor: pointer;}
+.btn-edit {width: 80px;height: 30px;color: #fff;cursor: pointer;border-radius: 5px;font-size: .8rem;}
 
 .form-container {width: 35%;display: flex;justify-content: center;background-color: #1e1e1e;align-items: center;height: 100%;}
-.form-container input[type="text"], .form-container textarea {width: 100%;margin: 10px 0;border: 1.5px solid;text-indent: 10px;}
+.form-container input[type="text"], .form-container textarea {width: 100%;margin: 10px 0;border: 1.5px solid;text-indent: 10px;background: #eaeaea;}
 .form-container input[type="text"]  {height: 35px;}
 .form-container textarea {min-height: 100px;}
 .form-container input[type="submit"] {width: 100px;height: 30px;}
 
 .blog-post-container {display: flex;width: 65%;flex-direction: column;align-items: center;padding-top: 50px;}
-.blog-post-item {width: 45%;padding: 2rem;border: 1.5px solid;margin: 1%;position: relative;overflow: auto;background-color: #1e1e1e;}
+.blog-post-item {width: 50%;padding: 2rem;border-radius: 10px;margin: 1%;position: relative;overflow: auto;background: #1e1e1e;}
 .blog-post-item h2 {font-size: 1.5rem;margin-bottom: 1rem;}
-.blog-post-item p {font-size: 1rem;line-height: 1.5;}
+.blog-post-item p {font-size: 1rem;line-height: 1.5;margin-bottom: 1rem;}
+.blog-post-buttons {display: flex;}
+.blog-post-buttons > * {margin-right: 1rem;}
+
+/* edit */
+.edit-container {display: flex;justify-content: center;align-items: center;height: 100vh;flex-direction: column;}
+.edit-form-container {background: #1e1e1e;padding: 3.5rem;border-radius: 10px;margin-bottom: 3rem;}
+.edit-form-container h1 {font-size: 1.5rem;margin-bottom: 2rem;}
+.edit-form {}
+.edit-form input, .edit-form textarea {width: 100%;margin-bottom: 1.5rem;}
+.btn-edit {line-height: 30px;text-align: center;text-decoration: none;}
+
+@media screen and (max-width: 1000px) {
+    .form-container {height: auto;padding: 40px 0;}
+    .container {flex-direction: column;}
+    .form-container, .blog-post-container {width: 100%;}
+    .blog-post-item {width: 90%;}
+}
